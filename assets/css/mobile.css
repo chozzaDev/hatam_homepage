@@ -1,0 +1,139 @@
+@media (max-width: 1040px) {
+    body {
+        background-color: rgb(246, 49, 65);
+    }
+
+    .main_container {
+        background-image: url("../images/mobile_background.png");
+        background-size: 100% 612px;
+        height: 612px;
+        width: 100%;
+    }
+
+    .h_title {
+        width: 320px;
+        margin-top: 60px;
+        text-align: center;
+        font-size: 25px;
+        text-shadow: -1.7px 1px 9px rgba(0, 0, 0, 0.5);
+    }
+
+    .h_logo {
+        align-self: center;
+        width: 140px;
+        margin-top: 15px;
+    }
+
+    .h_model {
+        width: 100%;
+        height: 313px;
+        background-position: center;
+    }
+
+    .talk_container {
+        background-image: url("../images/mobile_talk.png");
+        align-self: center;
+        width: 215px; /* 0.4566 */
+        height: 98px;
+    }
+
+    .talk_container .column div:first-child {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .talk_container .column div:last-child {
+        font-size: 21px;
+    }
+
+    .model_container {
+        margin: 0;
+    }
+
+    .store_btn_container {
+        display: none;
+    }
+
+    .mobile_store_btn_container {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 530px; /* 41 + 38*/
+    }
+
+    .mobile_store_btn_container > img {
+        width: 126px;
+        margin: 0 9px;
+    }
+
+    .content_text {
+        font-size: 12px;
+    }
+
+    .content_container {
+        margin-top: 51px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .content_text {
+        width: 100%;
+        margin-bottom: 51px;
+    }
+    .h_play {
+        display: none;
+    }
+
+    .making_btn img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .h_play_mobile {
+        display: flex;
+    }
+
+    .making_btn {
+        width: 153px;
+        height: 38px;
+        border-radius: 5px;
+        box-shadow: -2.6px 2px 7px rgba(0, 0, 0, 0.5);
+        align-items: center;
+    }
+
+    .making_btn div {
+        font-size: 12px;
+        color: rgb(246, 49, 65);
+        font-weight: 500;
+    }
+
+    .bottom_separator {
+        margin-top: 51px;
+        margin-bottom: 18px;
+        background-color: #ffffff;
+        height: 1px;
+        width: 85%;
+        align-self: center;
+    }
+
+    .h_footer {
+        text-align: center;
+    }
+    .h_footer .column{
+        width: 100%;
+    }
+
+    .copyright {
+        text-align: center;
+        height: 100px !important;
+        justify-content: center;
+    }
+
+    .terms {
+        display: none;
+    }
+
+    .terms_mobile {
+        display: block;
+    }
+}

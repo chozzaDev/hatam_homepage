@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HalfTime</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link href="assets/css/quasar.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/desktop.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/mobile.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+    <div class="column">
+        <div class="row main_container justify-center">
+            <div class="column justify-center">
+                <div class="h_title">세상에서 가장 빠른 마켓<br>땡처리 플랫폼</div>
+                <img class="h_logo" src="assets/images/hatam_logo.png">
+                <div class="row store_btn_container justify-between">
+                    <img src="assets/images/google_play_btn.png" @click="goGooglePlay">
+                    <img src="assets/images/app_store_btn.png" @click="goAppStore">
+                </div>
+            </div>
+            <div class="column model_container justify-end">
+                <div class="column talk_container justify-center content-center">
+                    <div class="column">
+                        <div>이제 중고거래도</div>
+                        <div>저렴하게 빨리팔자</div>
+                    </div>
+                </div>
+                <div class="h_model"></div>
+            </div>
+            <div class="row mobile_store_btn_container justify-between">
+                <img src="assets/images/google_play_btn.png" @click="goGooglePlay">
+                <img src="assets/images/app_store_btn.png" @click="goAppStore">
+            </div>
+        </div>
+        <div class="column content-center">
+            <div class="row justify-between content_container">
+                <div class="content_text">
+                    내 주변에 있는 매장들의 땡처리 행사를 확인하고,<br>
+                    시세보다 싸고 빠르게 땡처리 물건을 거래하는<br>
+                    땡처리 마켓에서 땡 잡을 기회를 잡으세요!<br>
+                </div>
+                <div class="row making_btn justify-center content-center">
+                    <img src="assets/images/play.png" class="q-mr-sm h_play">
+                    <img src="assets/images/play_mobile.png" class="q-mr-sm h_play_mobile">
+                    <div>메이킹 필름 바로가기</div>
+                </div>
+            </div>
+            <div class="bottom_separator"></div>
+            <div class="row h_footer justify-between">
+                <div class="col-4 text-center column justify-end terms_mobile">
+                    <div><a href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a href="https://hatam.kr/terms/geoTerms" target="_blank">위치기반서비스 이용약관</a></div>
+                </div>
+                <div class="col-4 column justify-end">
+                    <div class="h_bold q-mb-lg">(주)포르스</div>
+                    <div><span class="h_bold">대표</span> 문한철</div>
+                    <div><span class="h_bold">주소</span> 서울 서초구 마방로2길 12 보성빌딩 4F</div>
+                    <div><span class="h_bold">사업자등록번호</span> 734-88-01982</div>
+                    <div><span class="h_bold">고객문의</span> <a href="mailto:cs@hatam.kr">cs@hatam.kr</a>&nbsp;&nbsp;&nbsp;<span
+                            class="h_bold">제휴문의</span> <a href="mailto:contact@hatam.kr">contact@hatam.kr</a></div>
+                </div>
+                <div class="col-4 text-center column justify-end terms">
+                    <div><a class="h_bold" href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a class="h_bold" href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a href="https://hatam.kr/terms/geoTerms" class="h_bold" target="_blank">위치기반서비스
+                        이용약관</a></div>
+                </div>
+                <div class="col-4 text-right column justify-end copyright">
+                    <div>© 2021. fors Corp., Inc. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/vue.js"></script>
+<!--<script src="assets/js/quasar.umd.min.js"></script>-->
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '안녕하세요 Vue!'
+        },
+        methods: {
+            goGooglePlay: function () {
+                location.href = 'https://play.google.com/store/apps/details?id=kr.hatam.halftime'
+            },
+            goAppStore: function () {
+                alert('준비중입니다.')
+            }
+        }
+    })
+</script>
+</body>
+</html>

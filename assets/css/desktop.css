@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(224, 69, 73);
+}
+
+.main_container {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 826px;
+    width: 100%;
+    height: 826px;
+    box-shadow: 0px 3px 29px rgba(0, 0, 0, 0.5);
+}
+
+.h_title {
+    margin-top: 282px;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: -1.7px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.h_logo {
+    width: 293px;
+    margin-top: 29px;
+}
+
+.store_btn_container {
+    margin-top: 148px;
+    margin-bottom: 62px;
+}
+
+.store_btn_container > img {
+    width: 262px;
+    cursor: pointer;
+}
+
+.mobile_store_btn_container {
+    display: none;
+}
+
+.model_container {
+    margin-left: 90px;
+}
+
+.talk_container {
+    background-image: url("../images/talk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 370px;
+    height: 180px;
+}
+
+.talk_container .column div:first-child {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.talk_container .column div:last-child {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.h_model {
+    width: 370px;
+    height: 529px;
+    background-image: url("../images/hatam_model.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content_container {
+    margin-top: 51px;
+    width: 1039px;
+}
+
+.content_text {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.making_btn {
+    width: 256px;
+    height: 63px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 32px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.h_play_mobile {
+    display: none;
+}
+
+.making_btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.making_btn div {
+    font-size: 18px;
+    color: rgb(224, 69, 73);
+    font-weight: 600;
+}
+
+.bottom_separator {
+    margin-top: 48px;
+    margin-bottom: 18px;
+    background-color: #ffffff;
+    height: 3px;
+    width: 1039px;
+}
+
+.h_footer {
+    height: 100px;
+    margin-bottom: 18px;
+}
+
+.h_footer, .h_footer a {
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.h_bold {
+    font-weight: 600;
+}
+
+.terms_mobile {
+    display: none;
+    margin-bottom: 24px;
+}
+
