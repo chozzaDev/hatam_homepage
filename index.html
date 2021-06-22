@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>HalfTime</title>
-    <link rel="icon" href="favicon.png" />
-    <link rel="shortcut icon" href="favicon.png" />
+    <title>세상에서 가장 빠른 마켓 : hatam</title>
+    <link rel="icon" href="favicon.png"/>
+    <link rel="shortcut icon" href="favicon.png"/>
     <link href="assets/css/quasar.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/font.css" rel="stylesheet" type="text/css">
     <link href="assets/css/desktop.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
                     시세보다 싸고 빠르게 땡처리 물건을 거래하는<br>
                     땡처리 마켓에서 땡 잡을 기회를 잡으세요!<br>
                 </div>
-                <div class="row making_btn justify-center content-center">
+                <div class="row making_btn justify-center content-center" @click="goMakingMovie">
                     <img src="assets/images/play.png" class="q-mr-sm h_play">
                     <img src="assets/images/play_mobile.png" class="q-mr-sm h_play_mobile">
                     <div>메이킹 필름 바로가기</div>
@@ -53,7 +53,9 @@
             <div class="bottom_separator"></div>
             <div class="row h_footer justify-between">
                 <div class="col-4 text-center column justify-end terms_mobile">
-                    <div><a href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a href="https://hatam.kr/terms/geoTerms" target="_blank">위치기반서비스 이용약관</a></div>
+                    <div><a href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a
+                            href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
+                            href="https://hatam.kr/terms/geoTerms" target="_blank">위치기반서비스 이용약관</a></div>
                 </div>
                 <div class="col-4 column justify-end">
                     <div class="h_bold q-mb-lg">(주)포르스</div>
@@ -64,7 +66,9 @@
                             class="h_bold">제휴문의</span> <a href="mailto:contact@hatam.kr">contact@hatam.kr</a></div>
                 </div>
                 <div class="col-4 text-center column justify-end terms">
-                    <div><a class="h_bold" href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a class="h_bold" href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a href="https://hatam.kr/terms/geoTerms" class="h_bold" target="_blank">위치기반서비스
+                    <div><a class="h_bold" href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a
+                            class="h_bold" href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
+                            href="https://hatam.kr/terms/geoTerms" class="h_bold" target="_blank">위치기반서비스
                         이용약관</a></div>
                 </div>
                 <div class="col-4 text-right column justify-end copyright">
@@ -87,6 +91,9 @@
                 location.href = 'https://play.google.com/store/apps/details?id=kr.hatam.halftime'
             },
             goAppStore: function () {
+                alert('준비중입니다.')
+            },
+            goMakingMovie: function () {
                 alert('준비중입니다.')
             }
         }
