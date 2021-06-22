@@ -39,7 +39,13 @@
             <div class="column model_container justify-end">
                 <div class="column talk_container justify-center content-center">
                     <div class="column">
-                        <div>이제 중고거래도</div>
+                        <transition name="in-out-translate-fade" mode="out-in">
+                            <div v-if="view" key="on">이제 중고거래도</div>
+                            <div v-else key="off">오늘 영업종료전에</div>
+                        </transition>
+<!--                        <transition name="fade">-->
+<!--                            <div v-if="!view">오늘 영업종료전에</div>-->
+<!--                        </transition>-->
                         <div>저렴하게 빨리팔자</div>
                     </div>
                 </div>
@@ -97,9 +103,16 @@
     var app = new Vue({
         el: '#app',
         data: {
-            message: '안녕하세요 Vue!'
+            view: false
+        },
+        mounted: function() {
+            this.toggleText()
         },
         methods: {
+            toggleText: function () {
+                this.view = !this.view
+                setTimeout(this.toggleText.bind(this), 3000)
+            },
             goGooglePlay: function () {
                 location.href = 'https://play.google.com/store/apps/details?id=kr.hatam.halftime'
             },
