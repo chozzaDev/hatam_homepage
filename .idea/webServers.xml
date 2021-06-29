@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="330c7974-e3e9-4051-aedd-8fab221b63ec" name="hatam" url="https://hatam.kr/">
+        <fileTransfer rootFolder="/var/www/www.hatam/application/views/" accessType="SFTP" host="hatam.kr" port="22" sshConfigId="b1ce8549-7116-4154-9988-b049b82bcf35" sshConfig="ubuntu@hatam.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
