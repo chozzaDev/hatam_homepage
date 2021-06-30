@@ -187,9 +187,13 @@ body {
     height: 585px;
 }
 
-video {
+video, .making_video {
     min-width: 1040px;
-    min-height: 585px;
+    min-height: 800px;
+}
+
+.q-dialog__inner--minimized>div {
+    max-width: 100%;
 }
 
 .q-dialog__inner > div {

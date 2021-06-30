@@ -22,20 +22,20 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
           type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.0.1/dist/quasar.prod.css" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/font.css?lm=3" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/desktop.css?lm=3" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/mobile.css?lm=3" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/font.css?lm=4" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/desktop.css?lm=4" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/mobile.css?lm=4" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="q-app">
     <q-dialog v-model="showVideo">
-<!--        <q-video src="https://www.hatam.kr/static/mov/hatam_making.webm"-->
-<!--        ></q-video>-->
-        <video width="100%" height="50%" controls autoplay loop>
-            <source src="/static/mov/hatam_making.webm" type="video/webm">
-            <source src="/static/mov/hatam_making.mp4" type="video/mp4">
-            <source src="/static/mov/hatam_making.ogv" type="video/ogg">
-        </video>
+        <div class="making_video">
+            <video width="100%" height="50%" controls autoplay loop>
+                <source src="https://hatam.kr/static/mov/hatam_making.webm" type="video/webm">
+                <source src="https://hatam.kr/static/mov/hatam_making.mp4" type="video/mp4">
+                <source src="https://hatam.kr/static/mov/hatam_making.ogv" type="video/ogg">
+            </video>
+        </div>
     </q-dialog>
     <div class="column">
         <div class="row main_container justify-center">

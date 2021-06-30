@@ -155,9 +155,10 @@
         height: 355px;
     }
 
-    video {
+    video, .making_video {
         min-width: 100%;
         min-height: 355px;
+        height: 355px;
     }
 
     .q-dialog__inner--minimized {
