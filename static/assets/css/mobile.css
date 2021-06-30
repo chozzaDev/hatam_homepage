@@ -4,7 +4,7 @@
     }
 
     .main_container {
-        background-image: url("../images/mobile_background.png");
+        background-image: url("/static/assets/images/mobile_background.png");
         background-size: 100% 612px;
         height: 612px;
         width: 100%;
@@ -31,7 +31,7 @@
     }
 
     .talk_container {
-        background-image: url("../images/mobile_talk.png");
+        background-image: url("/static/assets/images/mobile_talk.png");
         align-self: center;
         width: 215px; /* 0.4566 */
         height: 98px;
@@ -154,6 +154,12 @@
     .q-video {
         height: 355px;
     }
+
+    video {
+        min-width: 100%;
+        min-height: 355px;
+    }
+
     .q-dialog__inner--minimized {
         padding: 0;
     }

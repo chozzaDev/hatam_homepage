@@ -22,24 +22,29 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
           type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.0.1/dist/quasar.prod.css" rel="stylesheet" type="text/css">
-    <link href="static/assets/css/font.css" rel="stylesheet" type="text/css">
-    <link href="static/assets/css/desktop.css" rel="stylesheet" type="text/css">
-    <link href="static/assets/css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/font.css?lm=3" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/desktop.css?lm=3" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/mobile.css?lm=3" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="q-app">
     <q-dialog v-model="showVideo">
-        <q-video src="https://www.hatam.kr/static/mov/hatam_making.webm"
-        ></q-video>
+<!--        <q-video src="https://www.hatam.kr/static/mov/hatam_making.webm"-->
+<!--        ></q-video>-->
+        <video width="100%" height="50%" controls autoplay loop>
+            <source src="/static/mov/hatam_making.webm" type="video/webm">
+            <source src="/static/mov/hatam_making.mp4" type="video/mp4">
+            <source src="/static/mov/hatam_making.ogv" type="video/ogg">
+        </video>
     </q-dialog>
     <div class="column">
         <div class="row main_container justify-center">
             <div class="column justify-center">
                 <div class="h_title">세상에서 가장 빠른 마켓<br>땡처리 플랫폼</div>
-                <img class="h_logo" src="static/assets/images/hatam_logo.png">
+                <img class="h_logo" src="/static/assets/images/hatam_logo.png">
                 <div class="row store_btn_container justify-between">
-                    <img src="static/assets/images/google_play_btn.png" @click="goGooglePlay">
-                    <img src="static/assets/images/app_store_btn.png" @click="goAppStore">
+                    <img src="/static/assets/images/google_play_btn.png" @click="goGooglePlay">
+                    <img src="/static/assets/images/app_store_btn.png" @click="goAppStore">
                 </div>
             </div>
             <div class="column model_container justify-end">
@@ -58,8 +63,8 @@
                 <div class="h_model"></div>
             </div>
             <div class="row mobile_store_btn_container justify-between">
-                <img src="static/assets/images/google_play_btn.png" @click="goGooglePlay">
-                <img src="static/assets/images/app_store_btn.png" @click="goAppStore">
+                <img src="/static/assets/images/google_play_btn.png" @click="goGooglePlay">
+                <img src="/static/assets/images/app_store_btn.png" @click="goAppStore">
             </div>
         </div>
         <div class="column content-center">
@@ -72,9 +77,9 @@
                 <div class="h_play_mobile_text">메이킹 필름 바로가기</div>
                 <div class="row making_btn justify-center content-center" @click="goMakingMovie"
                      @mouseover="showText = true" @mouseleave="showText = false">
-                    <!--                    <img src="static/assets/images/play.png" class="q-mr-sm h_play">-->
+                    <!--                    <img src="/static/assets/images/play.png" class="q-mr-sm h_play">-->
                     <transition name="in-out-translate-fade" mode="out-in">
-                        <img v-if="!showText" src="static/assets/images/play_mobile.png" class="q-mr-sm h_play">
+                        <img v-if="!showText" src="/static/assets/images/play_mobile.png" class="q-mr-sm h_play">
                         <div class="h_play_hover" v-else>메이킹 필름 바로가기</div>
                     </transition>
                 </div>
@@ -103,13 +108,14 @@
                 <div class="col-4 text-right column justify-end copyright">
                     <div>© 2021. fors Corp., Inc. All rights reserved</div>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
-<script src="static/assets/js/vue.js"></script>
-<script src="static/assets/js/quasar.umd.prod.js"></script>
-<script src="static/assets/js/ko-KR.umd.prod.js"></script>
+<script src="/static/assets/js/vue.js"></script>
+<script src="/static/assets/js/quasar.umd.prod.js"></script>
+<script src="/static/assets/js/ko-KR.umd.prod.js"></script>
 <script>
     const app = Vue.createApp({
         setup() {
