@@ -204,3 +204,25 @@ video, .making_video {
 /*    max-width: 1040px;*/
 /*    max-height: 585px;*/
 /*}*/
+.h_desktop {
+    display: inherit;
+}
+
+.h_mobile {
+    display: none;
+}
+
+.sns_icon {
+    width: 39px;
+    height: 39px;
+    margin-left: 11px;
+    cursor: pointer;
+}
+
+.sns_box {
+    margin-bottom: 33px;
+}
+
+.h_coffee_body {
+
+}

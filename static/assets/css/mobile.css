@@ -123,7 +123,7 @@
 
     .bottom_separator {
         margin-top: 51px;
-        margin-bottom: 18px;
+        margin-bottom: 32px;
         background-color: #ffffff;
         height: 1px;
         width: 85%;
@@ -163,5 +163,17 @@
 
     .q-dialog__inner--minimized {
         padding: 0;
+    }
+
+    .h_desktop {
+        display: none;
+    }
+
+    .h_mobile {
+        display: inherit;
+    }
+
+    .sns_icon {
+        margin-left: 27px;
     }
 }

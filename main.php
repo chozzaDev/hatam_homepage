@@ -22,13 +22,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
           type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.0.1/dist/quasar.prod.css" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/font.css?lm=4" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/desktop.css?lm=4" rel="stylesheet" type="text/css">
-    <link href="/static/assets/css/mobile.css?lm=4" rel="stylesheet" type="text/css">
+    <link href="static/assets/css/font.css?lm=12" rel="stylesheet" type="text/css">
+    <link href="static/assets/css/desktop.css?lm=12" rel="stylesheet" type="text/css">
+    <link href="static/assets/css/mobile.css?lm=12" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="q-app">
     <q-dialog v-model="showVideo">
+        <!--        <q-video src="https://www.hatam.kr/static/mov/hatam_making.webm"-->
+        <!--        ></q-video>-->
         <div class="making_video">
             <video width="100%" height="50%" controls autoplay loop>
                 <source src="https://hatam.kr/static/mov/hatam_making.webm" type="video/webm">
@@ -41,10 +43,10 @@
         <div class="row main_container justify-center">
             <div class="column justify-center">
                 <div class="h_title">세상에서 가장 빠른 마켓<br>땡처리 플랫폼</div>
-                <img class="h_logo" src="/static/assets/images/hatam_logo.png">
+                <img class="h_logo" src="static/assets/images/hatam_logo.png">
                 <div class="row store_btn_container justify-between">
-                    <img src="/static/assets/images/google_play_btn.png" @click="goGooglePlay">
-                    <img src="/static/assets/images/app_store_btn.png" @click="goAppStore">
+                    <img src="static/assets/images/google_play_btn.png" @click="goGooglePlay">
+                    <img src="static/assets/images/app_store_btn.png" @click="goAppStore">
                 </div>
             </div>
             <div class="column model_container justify-end">
@@ -63,8 +65,8 @@
                 <div class="h_model"></div>
             </div>
             <div class="row mobile_store_btn_container justify-between">
-                <img src="/static/assets/images/google_play_btn.png" @click="goGooglePlay">
-                <img src="/static/assets/images/app_store_btn.png" @click="goAppStore">
+                <img src="static/assets/images/google_play_btn.png" @click="goGooglePlay">
+                <img src="static/assets/images/app_store_btn.png" @click="goAppStore">
             </div>
         </div>
         <div class="column content-center">
@@ -77,19 +79,29 @@
                 <div class="h_play_mobile_text">메이킹 필름 바로가기</div>
                 <div class="row making_btn justify-center content-center" @click="goMakingMovie"
                      @mouseover="showText = true" @mouseleave="showText = false">
-                    <!--                    <img src="/static/assets/images/play.png" class="q-mr-sm h_play">-->
+                    <!--                    <img src="static/assets/images/play.png" class="q-mr-sm h_play">-->
                     <transition name="in-out-translate-fade" mode="out-in">
-                        <img v-if="!showText" src="/static/assets/images/play_mobile.png" class="q-mr-sm h_play">
+                        <img v-if="!showText" src="static/assets/images/play_mobile.png" class="q-mr-sm h_play">
                         <div class="h_play_hover" v-else>메이킹 필름 바로가기</div>
                     </transition>
                 </div>
             </div>
             <div class="bottom_separator"></div>
             <div class="row h_footer justify-between">
+                <div class="row justify-center h_mobile full-width sns_box">
+                    <a href="https://www.youtube.com/watch?v=KC-yC49zCPU" target="_blank"><img
+                                src="static/assets/images/youtube.png" class="sns_icon"></a>
+                    <a href="https://www.facebook.com/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%B9%A0%EB%A5%B8-%EB%A7%88%EC%BC%93-%ED%95%98%ED%83%90-102752022044019" target="_blank"><img
+                                src="static/assets/images/facebook.png" class="sns_icon"></a>
+                    <a href="https://instagram.com/hatam_sns?utm_medium=copy_link" target="_blank"><img
+                                src="static/assets/images/insta.png" class="sns_icon"></a>
+                    <a href="https://blog.naver.com/hatam_trend/222414105887" target="_blank"><img
+                                src="static/assets/images/naver_blog.png" class="sns_icon"></a>
+                </div>
                 <div class="col-4 text-center column justify-end terms_mobile">
                     <div><a href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a
-                            href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
-                            href="https://hatam.kr/terms/geoTerms" target="_blank">위치기반서비스 이용약관</a></div>
+                                href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
+                                href="https://hatam.kr/terms/geoTerms" target="_blank">위치기반서비스 이용약관</a></div>
                 </div>
                 <div class="col-4 column justify-end">
                     <div class="h_bold q-mb-lg">(주)포르스</div>
@@ -97,25 +109,34 @@
                     <div><span class="h_bold">주소</span> 서울 서초구 마방로2길 12 보성빌딩 4F</div>
                     <div><span class="h_bold">사업자등록번호</span> 734-88-01982</div>
                     <div><span class="h_bold">고객문의</span> <a href="mailto:cs@hatam.kr">cs@hatam.kr</a>&nbsp;&nbsp;&nbsp;<span
-                            class="h_bold">제휴문의</span> <a href="mailto:contact@hatam.kr">contact@hatam.kr</a></div>
+                                class="h_bold">제휴문의</span> <a href="mailto:contact@hatam.kr">contact@hatam.kr</a></div>
                 </div>
                 <div class="col-4 text-center column justify-end terms">
                     <div><a class="h_bold" href="https://hatam.kr/terms/useTerms" target="_blank">이용약관</a> | <a
-                            class="h_bold" href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
-                            href="https://hatam.kr/terms/geoTerms" class="h_bold" target="_blank">위치기반서비스
-                        이용약관</a></div>
+                                class="h_bold" href="https://hatam.kr/terms/privacyTerms" target="_blank">개인정보처리방침</a> | <a
+                                href="https://hatam.kr/terms/geoTerms" class="h_bold" target="_blank">위치기반서비스
+                            이용약관</a></div>
                 </div>
-                <div class="col-4 text-right column justify-end copyright">
+                <div class="col-4 text-right column justify-between copyright">
+                    <div class="row justify-end sns_box h_desktop">
+                        <a href="https://www.youtube.com/watch?v=KC-yC49zCPU" target="_blank"><img
+                                    src="static/assets/images/youtube.png" class="sns_icon"></a>
+                        <a href="https://www.facebook.com/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%B9%A0%EB%A5%B8-%EB%A7%88%EC%BC%93-%ED%95%98%ED%83%90-102752022044019" target="_blank"><img
+                                    src="static/assets/images/facebook.png" class="sns_icon"></a>
+                        <a href="https://instagram.com/hatam_sns?utm_medium=copy_link" target="_blank"><img
+                                    src="static/assets/images/insta.png" class="sns_icon"></a>
+                        <a href="https://blog.naver.com/hatam_trend/222414105887" target="_blank"><img
+                                    src="static/assets/images/naver_blog.png" class="sns_icon"></a>
+                    </div>
                     <div>© 2021. fors Corp., Inc. All rights reserved</div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-<script src="/static/assets/js/vue.js"></script>
-<script src="/static/assets/js/quasar.umd.prod.js"></script>
-<script src="/static/assets/js/ko-KR.umd.prod.js"></script>
+<script src="static/assets/js/vue.js"></script>
+<script src="static/assets/js/quasar.umd.prod.js"></script>
+<script src="static/assets/js/ko-KR.umd.prod.js"></script>
 <script>
     const app = Vue.createApp({
         setup() {
@@ -180,6 +201,7 @@
 </html>
 <script>
     import QDialog from "./assets/js/quasar.umd.min";
+
     export default {
         components: {QDialog}
     }

@@ -1,0 +1,112 @@
+body {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.h_primary {
+    color: rgb(224, 69, 73) !important;
+}
+
+.h_title {
+    margin-top: 21px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: rgb(224, 69, 73);
+    border-radius: 14px;
+    height: 28px;
+    width: 172px;
+    text-shadow: -1.7px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.h_logo {
+    width: 107px;
+    margin-top: 42px;
+}
+
+.h_desc_ct {
+    text-align: center;
+    color: #ffffff;
+    font-size: 11px;
+    background-color: rgb(224, 69, 73);
+    padding: 18px;
+}
+
+.h_desc_ct > div {
+    padding-bottom: 22px;
+}
+
+.h_bold {
+    font-weight: 700;
+}
+
+.h_btn1 {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 22px 47px;
+    background-color: rgb(224, 69, 73);
+    margin: 20px auto;
+}
+
+.h_text1 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.h_text2 {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.h_head1 {
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.h_head5 {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.h_mark_ct {
+    height: 100px;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.h_mark {
+    height: 53px;
+    width: 53px;
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgb(224, 69, 73);
+    border-radius: 5px;
+}
+
+.h_coffee_bg {
+    background-image: url("../images/promotion/coffee_bg.png");
+    background-size: 100% 100%;
+    width: 100%;
+    /*padding: 0 20px;*/
+}
+
+.h_coffee_body {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 368px;
+}
+
+.h_coffee_img {
+    width: 120px;
+    padding-top: 26px;
+    padding-bottom: 32px;
+}
+
+a {
+    text-decoration: none;
+}
