@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>하탐 첫 상품 등록 후 하탐확인 받으면 스타벅스 커피1</title>
+    <title>하탐 첫 상품 등록 후 하탐확인 받으면 스타벅스 커피</title>
     <meta name="title" content="하탐 첫 상품 등록 후 하탐확인 받으면 스타벅스 커피">
     <meta name="keywords" content="땡처리, 하탐">
     <meta name="description" content="세상에서 가장 빠른 마켓 땡처리 플랫폼">
@@ -11,8 +11,8 @@
     <!-- Open Graph data -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="세상에서 가장 빠른 마켓 : hatam"/>
-    <meta property="og:title" content="하탐 첫 상품 등록 후 하탐확인 받으면 스타벅스 커피"/>
-    <meta property="og:description" content="세상에서 가장 빠른 마켓 땡처리 플랫폼"/>
+    <meta property="og:title" content="하탐 첫 상품 등록 후 하탐확인 받으면 스타벅스 커피 100% 당첨"/>
+    <meta property="og:description" content="이제 중고거래도 저렴하게 빨리팔자"/>
     <meta property="article:author" content="HATAM"/>
     <meta property="og:url" content="https://hatam.kr/static/promotion/202107/deal_with_hatam.html"/>
     <meta property="og:image" content="https://hatam.kr/static/assets/images/promotion/p_20210705_og.jpeg?lm=3"/>
@@ -23,10 +23,11 @@
           type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.0.1/dist/quasar.prod.css" rel="stylesheet" type="text/css">
     <link href="../../assets/css/font.css" rel="stylesheet" type="text/css">
-    <link href="../../assets/css/promotion.css?lm=5" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/promotion.css?lm=6" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="q-app">
+
     <div class="column justify-center" style="min-height: 100%;">
         <div class="row justify-center">
             <div class="column h_coffee_bg items-center">
@@ -53,11 +54,11 @@
                         첫 상품 등록 후 하탐확인마크를 받으시는 모든 분들에게<br>
                         스타벅스 쿠폰을 증정합니다.
                     </div>
-                    <a href="https://hatam.page.link/Rdse" target="_blank">
-                        <div class="h_btn1">
-                            상품등록하기
-                        </div>
-                    </a>
+                    <!--                    <a href="https://hatam.page.link/Rdse" target="_blank">-->
+                    <div class="h_btn1" @click="goApp">
+                        상품등록하기
+                    </div>
+                    <!--                    </a>-->
                     <div class="h_desc_ct">
                         <div class="h_bold">
                             1. 하탐확인마크를 받은 상품 등록 건에 대하여<br>
@@ -84,12 +85,14 @@
                             이미지 등을 등록하신 경우에는 당첨에서 제외될 수 있습니다.
                         </div>
                     </div>
+                    <q-btn v-if="hasShare()" class="share_btn" fab icon="share" color="primary" @click="share"></q-btn>
                 </div>
+
             </div>
         </div>
     </div>
+    <a ref="appLink" href="https://hatam.page.link/Rdse" target="_blank" style="display: none;"></a>
 </div>
-
 <script src="../../assets/js/vue.js"></script>
 <script src="../../assets/js/quasar.umd.prod.js"></script>
 <script src="../../assets/js/ko-KR.umd.prod.js"></script>
@@ -106,7 +109,31 @@
         },
         methods: {
             goApp: function () {
-                location.href = 'https://hatam.page.link/Rdse';
+                if (window.MoveHatamPage && window.MoveHatamPage.postMessage) {
+                    MoveHatamPage.postMessage('/goods/registerGoodsStep1/create');
+                } else {
+                    // location.href = 'https://hatam.page.link/Rdse';
+                    this.$refs.appLink.click();
+                }
+            },
+            hasShare: function () {
+                if (window.ShareHatam && window.ShareHatam.postMessage) {
+                    return true;
+                }
+                return window.navigator && window.navigator.share;
+            },
+            share: function () {
+                if (window.ShareHatam && window.ShareHatam.postMessage) {
+                    ShareHatam.postMessage("https://hatam.kr/static/promotion/202107/deal_with_hatam.html?lm=" + Math.random());
+                    return;
+                }
+                try {
+                    navigator.share({
+                        title: "세상에서 가장 빠른 마켓 : hatam",
+                        url: "https://hatam.kr/static/promotion/202107/deal_with_hatam.html?lm=" + Math.random(),
+                    });
+                } catch (e) {
+                }
             }
         }
     })
@@ -116,3 +143,6 @@
 </script>
 </body>
 </html>
+<script>
+
+</script>

@@ -11,11 +11,11 @@
     <!-- Open Graph data -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="세상에서 가장 빠른 마켓 : hatam"/>
-    <meta property="og:title" content="세상에서 가장 빠른 마켓 땡처리 플랫폼"/>
-    <meta property="og:description" content="세상에서 가장 빠른 마켓 땡처리 플랫폼"/>
+    <meta property="og:title" content="hatam: 진정한 땡처리 플랫폼"/>
+    <meta property="og:description" content="비싸게 파는게 이득? 빨리 파는게 이득!"/>
     <meta property="article:author" content="HATAM"/>
     <meta property="og:url" content="https://hatam.kr"/>
-    <meta property="og:image" content="https://hatam.kr/assets/images/og_img.png"/>
+    <meta property="og:image" content="https://hatam.kr/static/assets/images/og_img.png"/>
 
     <link rel="icon" href="favicon.ico"/>
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -161,7 +161,7 @@
                 location.href = 'https://play.google.com/store/apps/details?id=kr.hatam.halftime'
             },
             goAppStore: function () {
-                alert('준비중입니다.')
+                location.href = 'https://itunes.apple.com/app/id1564868617'
             },
             goMakingMovie: function () {
                 this.showVideo = true

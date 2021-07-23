@@ -126,3 +126,10 @@ body {
 a {
     text-decoration: none;
 }
+
+.share_btn {
+    position:fixed;
+    top: 10px;
+    right: 20px;
+    background-color: rgb(224, 69, 73) !important;
+}
